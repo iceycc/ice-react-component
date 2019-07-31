@@ -7,9 +7,9 @@
     "dist"
   ],
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.config.js",
-    "dev": "webpack-dev-server --config webpack.dev.config.js",
-    "build": "webpack --config webpack.prod.config.js",
+    "start": "webpack-dev-server --config config/webpack.dev.config.js",
+    "dev": "webpack-dev-server --config config/webpack.dev.config.js",
+    "build": "webpack --config config/webpack.prod.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -17,9 +17,11 @@
   "dependencies": {
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.5",
+    "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "typescript": "^3.5.3"
+    "typescript": "^3.5.3",
+    "webpack-merge": "^4.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -29,11 +31,11 @@
     "babel-loader": "^8.0.6",
     "css-loader": "^3.1.0",
     "html-webpack-plugin": "^3.2.0",
+    "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.38.0",
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.7.2",
-    "webpack-node-externals": "^1.7.2",
-    "sass-loader": "^7.1.0"
+    "webpack-node-externals": "^1.7.2"
   }
 }
