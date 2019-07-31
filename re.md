@@ -15,4 +15,6 @@
 1. 注意npm源切换官方地址，建议安装nrm切换npm源地址
 2. 如果项目里有部分私密的代码不想发布到npm上，可以将它写入.gitignore 或.npmignore中，上传就会被忽略了
 3. 如果报权限方面的错，加上--force
-4. [参考文章](https://www.jianshu.com/p/7bba18925fbf)
+
+## 配置sass
+## 配置ts
