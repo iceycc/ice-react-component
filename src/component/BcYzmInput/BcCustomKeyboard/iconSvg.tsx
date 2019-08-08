@@ -1,5 +1,5 @@
 import React from 'react'
-import Help from 'Common/utils/Tool'
+// import Help from 'Common/utils/Tool'
 
 
 interface IProps {
