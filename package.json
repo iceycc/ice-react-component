@@ -1,6 +1,6 @@
 {
   "name": "icey-react-component",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "react组件库",
   "main": "dist/bundle.js",
   "files": [
