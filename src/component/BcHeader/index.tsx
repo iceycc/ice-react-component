@@ -2,7 +2,6 @@ import * as React from 'react'
 import './style.scss'
 import checkuserAgent from 'src/utils/checkiserAgemt'
 import {goBank} from 'src/utils/index'
-
 import { Native } from "src/utils/appBridge"
 import IconSvg from './IconSvg'
 
