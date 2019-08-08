@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3848c572-b3a7-44bf-99bb-464c922a59c1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/style/px2rem.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/Header/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Header/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn-error.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -55,7 +45,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/component/Header/index.tsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="28">
@@ -92,11 +82,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/component/Bottom/index.scss">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/component/Bottom/index.tsx">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -116,6 +101,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1232">
+              <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assets/style/px2rem.scss">
           <provider selected="true" editor-type-id="text-editor">
@@ -131,8 +125,8 @@
     <findStrings>
       <find>Props</find>
       <find>alias</find>
-      <find>readonly</find>
       <find>resolve</find>
+      <find>readonly</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -148,6 +142,7 @@
         <option value="$PROJECT_DIR$/config/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/component/Header/style.scss" />
         <option value="$PROJECT_DIR$/src/component/Header/index.tsx" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -168,29 +163,6 @@
             <path>
               <item name="reactComponent" type="b2602c69:ProjectViewProjectNode" />
               <item name="reactComponent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactComponent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactComponent" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactComponent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactComponent" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactComponent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactComponent" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="reactComponent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="reactComponent" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-              <item name="Header" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -227,12 +199,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565241549791</updated>
-      <workItem from="1565241553934" duration="1343000" />
+      <workItem from="1565241553934" duration="1582000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1343000" />
+    <option name="totallyTimeSpent" value="1582000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="0" width="1920" height="1080" extended-state="0" />
@@ -330,6 +302,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Header/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="1" column="21" lean-forward="true" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/Header/style.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -337,10 +316,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/Header/index.tsx">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="1" column="21" lean-forward="true" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+        <state relative-caret-position="1232">
+          <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
         </state>
       </provider>
     </entry>
