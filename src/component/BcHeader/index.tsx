@@ -61,7 +61,7 @@ export default class Headers extends React.Component<Props, any>{
                         style={{border: this.props.border && "none"}}>
                 <p className='headers-bar-tit'>{this.props.children}</p>
                 <p className='headers-bar-close' onClick={() => goBank()}>
-                {/* <img src={require('../../assets/images/closeO.png')} alt=""/> */}
+                 {/*<img src={require('src/assets/images/closeO.png')} alt=""/>*/}
                 </p>
             </div>
         }],
