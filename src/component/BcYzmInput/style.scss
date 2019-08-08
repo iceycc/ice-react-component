@@ -1,0 +1,132 @@
+@import 'Common/assets/style/px2rem.scss';
+.yzm-box{
+    width: 100%;
+    height: px2rem(44);
+    border-top: px2rem(1) solid #DDDDDD;
+    border-bottom: px2rem(1) solid #DDDDDD;
+    .yzm-input{
+        // padding: 0 px2rem(15);
+        padding: 0 px2rem(15);
+    }
+}
+#timer{
+    color: #666666;
+    min-width: px2rem(82);
+    padding-left: px2rem(8);
+    text-align: center;
+}
+#retrieve{
+    color: #508CEE;
+    padding-left: px2rem(8);
+    min-width: px2rem(82);
+    text-align: center;
+}
+.clearStyle{
+    width: 100%;
+    border:0!important;
+    outline: none;
+    background: #fff!important;
+    text-align: center;
+}
+.clearStyle:before{
+    display: none;
+}
+.BcYzm {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    span {
+        &:first-child {
+            width: 76%;
+            // display: flex;
+            // align-items: center;
+            .am-list-line {
+                .am-input-label {
+                    text-align: center;
+                    font-size: px2rem(16);
+                }
+            }
+        }
+    }
+
+    p {
+        width: 24%;
+        display: flex;
+        align-items: center;
+        padding-right:  px2rem(15);
+        .line{
+            width: 1px;
+            height: 15px;
+            background: #666666;
+            display: inline-block;
+        }
+        span {
+            width: 100%!important;
+            display: block;
+            color: #666666;
+            font-size: px2rem(14);
+            text-align: center;
+        }
+        .am-button-disabled{
+           background: #fff !important;
+        }
+    }
+}
+
+.clearStyle{
+    width: 100%;
+    border:0!important;
+    outline: none;
+    background: #fff!important;
+    text-align: center;
+}
+.clearStyle:before{
+    display: none;
+}
+.BcYzm {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    span {
+        &:first-child {
+            width: 76%;
+            // display: flex;
+            // align-items: center;
+            .am-list-line {
+                .am-input-label {
+                    text-align: center;
+                    font-size: px2rem(16);
+                }
+            }
+        }
+    }
+
+    p {
+        width: 24%;
+        display: flex;
+        align-items: center;
+        padding-right:  px2rem(15);
+        .line{
+            width: 1px;
+            height: 15px;
+            background: #666666;
+            display: inline-block;
+        }
+        span {
+            width: 100%!important;
+            display: block;
+            color: #666666;
+            font-size: px2rem(14);
+            text-align: center;
+        }
+        .am-button-disabled{
+           background: #fff !important;
+        }
+    }
+}
