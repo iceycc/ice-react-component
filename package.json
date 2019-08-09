@@ -1,7 +1,7 @@
 {
-  "name": "icey-react-component",
-  "version": "0.0.7",
-  "description": "react组件库",
+  "name": "bc-bank-design",
+  "version": "0.0.1",
+  "description": "比财react组件库，工具类",
   "main": "dist/bundle.js",
   "files": [
     "dist"
