@@ -96,7 +96,7 @@ export default class Headers extends React.Component<Props, any>{
             console.log('app.version', version)
             Native.updateTitle((this.props.children) + version || ' ')
         }
-        return <div className='Headers' ref={(el) => refs && refs(el)}>
+        return <div className='bcd-headers' ref={(el) => refs && refs(el)}>
             {
                 // 控制显示原生的头部还是H5的
                 this.state.show ?

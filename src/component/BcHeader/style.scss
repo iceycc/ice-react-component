@@ -1,6 +1,6 @@
 @import 'assets/style/px2rem.scss';
 
-.Headers {
+.bcd-headers {
   width: 100%;
   .headers-bar {
     width: 100%;
@@ -12,7 +12,7 @@
     position: relative;
     padding: px2rem(4) 0;
     border-bottom: 1px solid #dddd;
-    background:$red;
+    // background:$red;
 
     p {
       font-size: px2rem(18);
