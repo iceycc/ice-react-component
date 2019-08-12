@@ -1,8 +1,8 @@
 import * as React from 'react'
 import './style.scss'
-import checkuserAgent from 'src/utils/checkiserAgemt'
-import { goBank } from 'src/utils/index'
-import { Native } from "src/utils/appBridge"
+import checkuserAgent from 'utils/checkiserAgemt'
+import { goBank } from 'utils/index'
+import { Native } from "utils/appBridge"
 import IconSvg from './IconSvg'
 
 interface Props {

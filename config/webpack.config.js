@@ -6,7 +6,9 @@ module.exports = {
         extensions: ['.ts', '.tsx', '.js', '.jsx'],
         alias: {
             'src': path.resolve(rootDir, 'src'),// 这样配置后 @ 可以指向 src 目录
-            "assets": path.resolve(rootDir, 'src/assets'),
+            "assets": path.resolve(rootDir, 'src','assets'),
+            "utils": path.resolve(rootDir, 'src','utils'),
+            // utils
         }
     },
     module: {
