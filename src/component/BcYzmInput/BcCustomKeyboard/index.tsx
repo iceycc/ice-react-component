@@ -19,7 +19,7 @@ class KeyboardItem extends React.Component<KeyboardItemProps, any> {
         const { children, onClick, className = '' } = this.props
         let value = (className == 'delete' ? className : children)
         return (
-            <TouchFeedback activeClassName={`${className == 'delete' || children == '' ? '' : 'active'}`}>
+            <TouchFeedback activeClassName={`${className == 'delete' || children == '' ? '' : 'keyboard-active'}`}>
                 <li
                     onClick={e => onClick(e, value as string)}
                     className={`${children == '' ? 'not-bg' : className}`}
