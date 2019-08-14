@@ -1,29 +1,13 @@
-import { Base64 } from "js-base64";
-
 
 declare var window: any;
 var u = navigator.userAgent;
 var isAndroid = u.indexOf("Android") > -1 || u.indexOf("Adr") > -1; //android终端
 var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-// 调用安卓和ios 必须双引号
-// const HeaderType =
+import { Base64 } from "js-base64";
+import {Base} from './appBridge.base'
+
 export const Native = {
-    getSystemType() {
-        if (isAndroid) return 'android'
-        if (isIOS) return 'ios'
-        return 'h5'
-    },
-    isApp() {
-        if (u.indexOf("besharp") != -1) {
-            return true
-        } else if (u.indexOf("pincai") != -1) {
-            return true
-        } else if (JSON.parse(sessionStorage.getItem('isBicaiApp')) === '1') {
-            return true
-        } else {
-            return false
-        }
-    },
+    ...Base,
     //每次跳转安卓的原生页面都得关闭一下 ios跳转后不需要关闭
     // 1. app二类户持仓页
     // 2. app产品详情页 openProductDetail
