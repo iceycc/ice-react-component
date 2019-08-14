@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.scss'
 import { InputItem, Button } from 'antd-mobile'
-import { Native } from "../../utils/appBridge"
+import { Native } from "appBridge/index"
 import BcNumberInput from './BcNumberInput'
 
 /**

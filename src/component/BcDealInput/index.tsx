@@ -25,7 +25,7 @@ if (isIPhone) {
 interface Props {
     extra?: boolean,
     value: any,
-    handleChange?: Function,
+    handleChange?: (val:any)=>{},
     handleExtra?: Function,
     placeholder?: string,
     isEdit?: boolean

@@ -8,7 +8,7 @@ module.exports = {
             'src': path.resolve(rootDir, 'src'),// 这样配置后 @ 可以指向 src 目录
             "assets": path.resolve(rootDir, 'src','assets'),
             "utils": path.resolve(rootDir, 'src','utils'),
-            // utils
+            "appBridge": path.resolve(rootDir, 'src','appBridge')
         }
     },
     module: {
@@ -31,7 +31,21 @@ module.exports = {
             {
                 test: /\.tsx?$/,
                 loader: "awesome-typescript-loader"
-            }
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif)$/,
+                use: [
+                 {
+                  loader: "url-loader",
+                  options: {
+                   name: "[name]-[hash:5].min.[ext]",
+                   limit: 20000, // size <= 20KB
+                   publicPath: "static/",
+                   outputPath: "static/"
+                  }
+                 }
+                ]
+               }
         ]
     },
 };

@@ -5,6 +5,7 @@
     "paths": {
       "assets":["assets/*"],
       "utils":["utils/*"],
+      "appBridge":["appBridge/*"]
     },
     "rootDirs": ["include"],
     "outDir": "dist",

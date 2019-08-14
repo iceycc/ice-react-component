@@ -2,10 +2,14 @@ import * as React from 'react'
 import './style.scss'
 import checkuserAgent from 'utils/checkiserAgemt'
 import { goBank } from 'utils/index'
-import { Native } from "utils/appBridge"
+import { Native } from "appBridge/index"
 import IconSvg from './IconSvg'
-
-interface Props {
+declare namespace window {
+    namespace document{
+        let title:any
+    }
+}
+interface IHeaderProps {
     headerarr?: string[],
     store?: any,
     className?: string,
@@ -15,19 +19,19 @@ interface Props {
     refs?: any,
     // 传none是隐藏app的标题。传back是左边带返回按钮的，默认的不传就是这个。close是右边关闭按钮的。empty是左右没按钮的，交易结果页处理中页面都是这种的，
     type?: 'none' | 'back' | 'close' | 'empty',
-    leftColor?: string
+    leftColor?: string,
 }
+const initState =   {
+    show: true,
+    detailedTabSelect: 0, // tab默认选中为0
+}
+type Istate =Readonly<typeof initState>
+export default class Headers extends React.Component<IHeaderProps, Istate>{
+    readonly state:Istate = initState
 
-
-
-export default class Headers extends React.Component<Props, any>{
-    state = {
-        show: true,
-        detailedTabSelect: 0, // tab默认选中为0
-    }
+  
     componentWillMount(): void {
         let isE = checkuserAgent()
-
         if (isE.isApp || isE.isWeixin || isE.isWeibo || isE.isDingTalk || Native.isApp()) {
             this.setState({
                 show: false
@@ -38,6 +42,7 @@ export default class Headers extends React.Component<Props, any>{
             })
         }
     }
+    // headerBox
     /**
      * 0:隐藏导航栏，1显示左边按钮，2显示右边按钮，3全不显示
      */
@@ -48,16 +53,18 @@ export default class Headers extends React.Component<Props, any>{
         }],
         ['back', () => {
             let { leftColor = '#333333' } = this.props
+            let style:React.CSSProperties = { border: this.props.border && "none" }
             return <div className={'headers-bar' + " " + this.props.className}
-                style={{ border: this.props.border && "none" }}>
+                style={style}>
                 <p className='headers-bar-back' style={{ display: 'block' }}
                     onClick={() => goBank()}><IconSvg color={leftColor} /></p>
                 <p className='headers-bar-tit'>{this.props.children}</p>
             </div>
         }],
         ['close', () => {
+            let style:React.CSSProperties = { border: this.props.border && "none" }
             return <div className={'headers-bar' + " " + this.props.className}
-                style={{ border: this.props.border && "none" }}>
+                style={style}>
                 <p className='headers-bar-tit'>{this.props.children}</p>
                 <p className='headers-bar-close' onClick={() => goBank()}>
                     {/* <img src={require('../../assets/images/closeO.png')} alt=""/> */}
@@ -65,15 +72,16 @@ export default class Headers extends React.Component<Props, any>{
             </div>
         }],
         ['empty', () => {
+            let style:React.CSSProperties = { border: this.props.border && "none" }
             return <div className={'headers-bar' + " " + this.props.className}
-                style={{ border: this.props.border && "none" }}><p
+                style={style}><p
                     className='headers-bar-tit'>{this.props.children}</p></div>
         }]
     ])
 
     componentDidMount() {
         navigator.userAgent;
-        let document: any = window.document
+        let document = window.document
         document.title = this.props.children
         Native.updateTitle(this.props.children)
     }
@@ -85,7 +93,7 @@ export default class Headers extends React.Component<Props, any>{
         }
     }
     render() {
-        let document: any = window.document
+        let document = window.document
         document.title = this.props.children
         let { refs = null } = this.props
         let { type } = this.props
