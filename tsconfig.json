@@ -1,11 +1,10 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "baseUrl": "./",
+    "baseUrl": "src",
     "paths": {
-      "src":["src/*"],
-      "images":["src/assets/images/*"],
-      "assets":["src/assets/*"]
+      "assets":["assets/*"],
+      "utils":["utils/*"],
     },
     "rootDirs": ["include"],
     "outDir": "dist",

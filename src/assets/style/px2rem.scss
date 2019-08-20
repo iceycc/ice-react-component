@@ -4,6 +4,7 @@ $designWidth: 375;
   @return $px*10/$designWidth + rem;
 }
 
+$red: red;
 @mixin placeholder($placeholderColor) {
   &::-webkit-input-placeholder { /* WebKit browsers */
     color: $placeholderColor;
