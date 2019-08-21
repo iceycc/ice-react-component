@@ -9,7 +9,7 @@ html{
 html:not([data-scale]) .am-list-body::before, html:not([data-scale]) .am-list-body::after{
     height: 0;
 }
-.box{
+.deal-input-box{
     padding-left: px2rem(15);
     .am-list-item .am-input-label{
         font-size: px2rem(22)
@@ -28,12 +28,15 @@ html:not([data-scale]) .am-list-body::before, html:not([data-scale]) .am-list-bo
         font-size: px2rem(24) !important;
     }
     .am-list-item .am-input-clear{
-        width: px2rem(16);
-        height: px2rem(16);
-        background-size: px2rem(16) auto;
+        width: px2rem(18);
+        height: px2rem(18);
+        background-size: px2rem(18) auto;
         background-position: px2rem(1.5) px2rem(1.5);
     }
     .am-list-item .am-input-extra{
         color: #508CEE;
+        max-height: px2rem(44);
+        min-height: px2rem(44);
+        line-height: px2rem(44);
     }
 }
