@@ -4,6 +4,7 @@ import { InputItem, Button } from 'antd-mobile'
 import { Native } from "appBridge/index"
 import BcNumberInput from './BcNumberInput'
 
+//最后记得改css引入路径
 /**
  * @param countDownFlag 控制是否开始倒数
  * @param click 点击重新获取事件
@@ -17,7 +18,6 @@ interface Props {
     change: Function,
     [propName: string]: any;
 }
-let endTime = null
 class BcYzmInput extends React.Component<Props, any>{
     constructor(props) {
         super(props)
@@ -26,55 +26,47 @@ class BcYzmInput extends React.Component<Props, any>{
             flagTime: false
         }
     }
-
     componentWillReceiveProps(props) {
-        console.log(props)
         if (props.countDownFlag) {
-            this.actionCountDown()
+            this.send()
+            props.resetFlag(false)
         }
-        this.setState({
-            flagTime: props.countDownFlag,
-        })
+    }
+    setInter = () => {
+        this.endTime = setInterval(this.actionCountDown.bind(this), 1000)
+    }
+    send = () => {
+        this.setState({ flagTime: true, time: this.props.timer });
+        this.setInter();
     }
     //倒计时开始
     actionCountDown() {
                  endTime = null
         let { time } = this.state
-        let { timer,resetFlag } = this.props
+        let { timer } = this.props
 
-       endTime = setInterval(() => {
+        if (time === 0) {
+            this.clear()
+            this.setState({ flagTime: false, time: timer })
+        } else {
             this.setState({
-                time: time -= 1
-            },()=>{
-                if (time <=0) {
-                    clearInterval(endTime)
-                    endTime = null
-                    this.setState({ flagTime: false, time: timer })
-                    resetFlag(false)
-                }
+                time: time -= 1,
+                flagTime: true
             })
-        }, 1000)
-    }
-    componentWillUnmount(){
-        let { resetFlag } = this.props
-        clearInterval(endTime)
-        endTime = null
-        resetFlag(false)
-    }
-    componentDidMount() {
-        let { countDownFlag,timer } = this.props
-        if (countDownFlag) {
-            this.actionCountDown()
         }
-        this.setState({
-            flagTime: countDownFlag,
-            time:timer
-        })
     }
+    clear = () => {
+        clearInterval(this.endTime)
+    }
+    componentWillUnmount() {
+        this.clear()
+    }
+
+    endTime = null
 
     render() {
         const isIOS = (Native.getSystemType() === 'ios' ? true : false)
-        let { click, change, countDownFlag } = this.props
+        let { click, change } = this.props
         let { time, flagTime } = this.state
         return (
             isIOS ?
@@ -84,7 +76,9 @@ class BcYzmInput extends React.Component<Props, any>{
                     </span>
                     <p>
                         <i className='line'></i>
-                        <Button className='clearStyle' disabled={flagTime} onClick={() => click(this.actionCountDown.bind(this))}><span>{(flagTime ? `${time}秒后重发` : <span style={{ color: '#508CEE' }}>重新获取</span>)}</span></Button>
+                        <Button className='clearStyle' disabled={flagTime} onClick={() => {
+                            click(this.actionCountDown.bind(this))
+                        }}><span>{(flagTime ? `${time}秒后重发` : <span style={{ color: '#508CEE' }}>重新获取</span>)}</span></Button>
                     </p>
                 </div> :
                 <div className="yzm-box">
