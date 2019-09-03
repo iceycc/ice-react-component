@@ -17,7 +17,7 @@ interface Props {
     change: Function,
     [propName: string]: any;
 }
-
+let endTime = null
 class BcYzmInput extends React.Component<Props, any>{
     constructor(props) {
         super(props)
@@ -41,7 +41,7 @@ class BcYzmInput extends React.Component<Props, any>{
         let { time } = this.state
         let { timer,resetFlag } = this.props
 
-        let endTime = setInterval(() => {
+       endTime = setInterval(() => {
             this.setState({
                 time: time -= 1
             },()=>{
@@ -54,7 +54,9 @@ class BcYzmInput extends React.Component<Props, any>{
             })
         }, 1000)
     }
-
+    componentWillUnmount(){
+        endTime = null
+    }
     componentDidMount() {
         let { countDownFlag,timer } = this.props
         if (countDownFlag) {
