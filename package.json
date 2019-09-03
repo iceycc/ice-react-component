@@ -1,6 +1,6 @@
 {
   "name": "bc-bank-design",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "比财react组件库，工具类",
   "main": "dist/bundle.js",
   "files": [

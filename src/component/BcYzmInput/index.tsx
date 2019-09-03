@@ -38,6 +38,7 @@ class BcYzmInput extends React.Component<Props, any>{
     }
     //倒计时开始
     actionCountDown() {
+                 endTime = null
         let { time } = this.state
         let { timer,resetFlag } = this.props
 
@@ -55,7 +56,10 @@ class BcYzmInput extends React.Component<Props, any>{
         }, 1000)
     }
     componentWillUnmount(){
+        let { resetFlag } = this.props
+        clearInterval(endTime)
         endTime = null
+        resetFlag(false)
     }
     componentDidMount() {
         let { countDownFlag,timer } = this.props
