@@ -32,6 +32,7 @@ class BcYzmInput extends React.Component<Props, any>{
             props.resetFlag(false)
         }
     }
+    endTime = null
     setInter = () => {
         this.endTime = setInterval(this.actionCountDown.bind(this), 1000)
     }
@@ -41,7 +42,6 @@ class BcYzmInput extends React.Component<Props, any>{
     }
     //倒计时开始
     actionCountDown() {
-                 endTime = null
         let { time } = this.state
         let { timer } = this.props
 
@@ -61,9 +61,6 @@ class BcYzmInput extends React.Component<Props, any>{
     componentWillUnmount() {
         this.clear()
     }
-
-    endTime = null
-
     render() {
         const isIOS = (Native.getSystemType() === 'ios' ? true : false)
         let { click, change } = this.props
