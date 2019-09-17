@@ -24,8 +24,8 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                include: path.resolve(__dirname, '../src'),
-                exclude: /node_modules/,
+                include: path.resolve(__dirname, '../src'), // 包括
+                exclude: /node_modules/, // 排除
                 use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
