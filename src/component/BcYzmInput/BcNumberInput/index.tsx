@@ -145,7 +145,7 @@ class BcYzmInput extends React.Component<NumberInputProps, any>{
                     </div>
                     {extra && <div className="extra" dangerouslySetInnerHTML={{ __html: extra }} onClick={onExtraClick}></div>}
                 </div>
-                <BcCustomKeyboard className={focus ? '' : 'none'} onKeyboardClick={this.handleKeyboard} />
+                <BcCustomKeyboard className={focus ? '' : 'key-board-hidden'} onKeyboardClick={this.handleKeyboard} />
             </>
         )
     }

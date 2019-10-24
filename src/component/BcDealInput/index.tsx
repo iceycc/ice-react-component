@@ -25,7 +25,7 @@ if (isIPhone) {
 interface Props {
     extra?: boolean,
     value: any,
-    handleChange?: Function,
+    handleChange?: (val:any)=>{},
     handleExtra?: Function,
     placeholder?: string,
     isEdit?: boolean
@@ -50,7 +50,7 @@ class DealInput extends React.Component<Props, any> {
     render () {
         let { placeholder = '请输入金额', extra = '', isEdit = true, value } = this.props
         return (
-           <div className="box">
+           <div className="deal-input-box">
                 <List>
                     <InputItem
                         className="input-money"

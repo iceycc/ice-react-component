@@ -9,6 +9,14 @@
         padding: 0 px2rem(15);
     }
 }
+.BcYzm .am-list-item .am-input-control{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.BcYzm .am-list-item .am-input-control input{
+    height: 100%;
+}
 #timer{
     color: #666666;
     min-width: px2rem(82);
