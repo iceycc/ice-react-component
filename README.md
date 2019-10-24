@@ -1,5 +1,8 @@
 bc基于react+antdM开发的组件库
 
+## 安装
+`npm install bc-bank-design --save` or `yarn add bc-bank-design`
+
 
 ## 版本更新
 - 0.0.1
