@@ -30,6 +30,7 @@ interface Props {
     placeholder?: string,
     isEdit?: boolean,
     refs?:Function
+    onVirtualKeyboardConfirm?: Function
 }
 
 class DealInput extends React.Component<Props, any> {
@@ -48,7 +49,8 @@ class DealInput extends React.Component<Props, any> {
         let {extra , handleExtra} = this.props
         extra ? handleExtra() : ''
     }
-    onVirtualKeyboardConfirm(val) {
+    onVirtualKeyboardConfirm(val?) {
+        console.log('onVirtualKeyboardConfirm')
         this.props.onVirtualKeyboardConfirm && this.props.onVirtualKeyboardConfirm(val)
     }
     render () {
