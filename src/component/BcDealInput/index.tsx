@@ -48,11 +48,12 @@ class DealInput extends React.Component<Props, any> {
         extra ? handleExtra() : ''
     }
     render () {
-        let { placeholder = '请输入金额', extra = '', isEdit = true, value } = this.props
+        let { placeholder = '请输入金额', extra = '', isEdit = true, value, refs } = this.props
         return (
            <div className="deal-input-box">
                 <List>
                     <InputItem
+                        ref={(el) => refs && refs(el)}
                         className="input-money"
                         type={'money'}
                         labelNumber={1}
