@@ -28,7 +28,8 @@ interface Props {
     handleChange?: (val:any)=>{},
     handleExtra?: Function,
     placeholder?: string,
-    isEdit?: boolean
+    isEdit?: boolean,
+    refs?:Function
 }
 
 class DealInput extends React.Component<Props, any> {
