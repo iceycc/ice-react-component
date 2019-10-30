@@ -47,6 +47,9 @@ class DealInput extends React.Component<Props, any> {
         let {extra , handleExtra} = this.props
         extra ? handleExtra() : ''
     }
+    onVirtualKeyboardConfirm(val) {
+        this.props.onVirtualKeyboardConfirm && this.props.onVirtualKeyboardConfirm(val)
+    }
     render () {
         let { placeholder = '请输入金额', extra = '', isEdit = true, value, refs } = this.props
         return (
@@ -63,6 +66,7 @@ class DealInput extends React.Component<Props, any> {
                         editable={isEdit}
                         onChange={(val) => this.change(val)}
                         clear
+                        onVirtualKeyboardConfirm={(val) => this.onVirtualKeyboardConfirm(val)}
                         extra={extra}
                         onExtraClick={() => this.handleExtra()}
                         moneyKeyboardWrapProps={moneyKeyboardWrapProps}
