@@ -13,6 +13,7 @@ declare module 'react-dom'
 declare module 'node-sass'
 declare module '@'
 declare module 'appBridge'
+declare module 'js-base64'
 
 
 

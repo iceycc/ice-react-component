@@ -1,9 +1,10 @@
 import * as React from 'react'
 import './style.scss'
 import checkuserAgent from 'utils/checkiserAgemt'
-import { goBank } from 'utils/index'
+import BcUtils from 'utils/index'
 import { Native } from "appBridge/index"
 import IconSvg from './IconSvg'
+const {goBank} = BcUtils
 declare namespace window {
     namespace document{
         let title:any

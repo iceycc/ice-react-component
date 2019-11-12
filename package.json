@@ -1,6 +1,6 @@
 {
   "name": "bc-bank-design",
-  "version": "0.0.17",
+  "version": "0.0.19",
   "description": "比财react组件库，工具类",
   "main": "dist/bundle.js",
   "files": [
@@ -10,6 +10,7 @@
     "start": "webpack-dev-server --config config/webpack.dev.config.js",
     "dev": "webpack-dev-server --config config/webpack.dev.config.js",
     "build": "webpack --config config/webpack.prod.config.js",
+    "build:up": "webpack --config config/webpack.prod.config.js && npm publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -18,6 +19,7 @@
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.5",
     "antd-mobile": "^2.2.14",
+    "js-base64": "^2.5.1",
     "rc-form": "^2.4.8",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
@@ -30,7 +32,7 @@
     "babel-loader": "^8.0.6",
     "css-loader": "^3.1.0",
     "html-webpack-plugin": "^3.2.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "typescript": "^3.5.3",
